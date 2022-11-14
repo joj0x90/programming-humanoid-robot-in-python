@@ -21,7 +21,7 @@
 
 
 from pid import PIDAgent
-from keyframes import leftBackToStand
+from keyframes import hello
 
 
 class AngleInterpolationAgent(PIDAgent):
@@ -65,11 +65,9 @@ class AngleInterpolationAgent(PIDAgent):
         if 'LHipYawPitch' in target_joints:
             target_joints['RHipYawPitch'] = target_joints['LHipYawPitch']
 
-        print(target_joints)
-
         return target_joints
 
 if __name__ == '__main__':
     agent = AngleInterpolationAgent()
-    agent.keyframes = leftBackToStand()  # CHANGE DIFFERENT KEYFRAMES
+    agent.keyframes = hello()  # CHANGE DIFFERENT KEYFRAMES
     agent.run()

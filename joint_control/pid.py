@@ -54,8 +54,11 @@ class PIDController(object):
         '''
         # YOUR CODE HERE
 
+        print(target)
+
+
         e = target - sensor;
-        u1 = self.u + (self.Kp + self.Ki*self.dt + (self.Kd / self.dt))*e - (self.Kp + (2*self.Kd)/self.dt)*self.e1 + (self.Kd/self.dt) * self.e2;
+        self.u = self.u + (self.Kp + self.Ki*self.dt + (self.Kd / self.dt))*e - (self.Kp + (2*self.Kd)/self.dt)*self.e1 + (self.Kd/self.dt) * self.e2;
         self.e2 = self.e1;
         self.e1 = e;
 
