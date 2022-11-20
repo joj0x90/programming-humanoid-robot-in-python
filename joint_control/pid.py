@@ -52,8 +52,16 @@ class PIDController(object):
         @param sensor: current values from sensor
         @return control signal
         '''
+<<<<<<< HEAD
+=======
+        # YOUR CODE HERE
+
+        print(target)
+
+
+>>>>>>> de92a8ee242e19f050e836701c09608aabec37cc
         e = target - sensor;
-        u1 = self.u + (self.Kp + self.Ki*self.dt + (self.Kd / self.dt))*e - (self.Kp + (2*self.Kd)/self.dt)*self.e1 + (self.Kd/self.dt) * self.e2;
+        self.u = self.u + (self.Kp + self.Ki*self.dt + (self.Kd / self.dt))*e - (self.Kp + (2*self.Kd)/self.dt)*self.e1 + (self.Kd/self.dt) * self.e2;
         self.e2 = self.e1;
         self.e1 = e;
 
