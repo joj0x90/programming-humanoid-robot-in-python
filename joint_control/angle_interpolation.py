@@ -42,8 +42,6 @@ class AngleInterpolationAgent(PIDAgent):
 
     def angle_interpolation(self, keyframes, perception):
         target_joints = {}
-        # YOUR CODE HERE
-
         names = keyframes[0];
         times = keyframes[1];
         keys = keyframes[2];
